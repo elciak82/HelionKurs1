@@ -1,6 +1,6 @@
 package videopoint.shapes;
 
-public final class Rectangle extends Shape { //klasa zamknięta bo final
+public final class Rectangle implements IShape { //klasa zamknięta bo final
     private int height;
     private int width;
 
@@ -33,7 +33,7 @@ public final class Rectangle extends Shape { //klasa zamknięta bo final
     }
 
     @Override
-    int countArea() {
+    public int countArea() {
         return width * height;
     }
 
