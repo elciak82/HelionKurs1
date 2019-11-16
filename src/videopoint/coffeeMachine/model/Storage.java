@@ -7,7 +7,7 @@ public class Storage { //api
     MilkBox milkBox;
     ChocolateBox chocolateBox;
 
-    private Storage() { //inicjalizacja w konstruktorze
+    public Storage() { //inicjalizacja w konstruktorze
         coffeeBox = new CoffeeBox();
         milkBox = new MilkBox();
         chocolateBox = new ChocolateBox();
