@@ -29,6 +29,16 @@ public final class Rectangle extends Shape { //klasa zamknięta bo final
 
     @Override
     public int countPerimeter() {
+        return 2 * width + 2 * height;
+    }
+
+    @Override
+    int countArea() {
         return width * height;
     }
+
+//    @Override
+//    public int countPerimeter() {
+//        return width * height;
+//    }
 }

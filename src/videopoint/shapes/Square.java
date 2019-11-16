@@ -23,7 +23,12 @@ public final class Square extends Shape { //mozna dziedziczyć tylko po 1 klasie
     }
 
     @Override
+    int countPerimeter() {
+        return 4* size;
+    }
+
+    @Override
     public int countArea() {
-        return 4 * size;
+        return size * size;
     }
 }
