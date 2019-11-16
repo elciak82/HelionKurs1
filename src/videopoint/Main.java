@@ -1,5 +1,10 @@
 package videopoint;
 
+import videopoint.shapes.Rectangle;
+import videopoint.shapes.Square;
+
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         Rectangle myRectangle = new Rectangle(4,6);

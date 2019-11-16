@@ -1,9 +1,9 @@
-package videopoint;
+package videopoint.shapes;
 
-public final class Square extends Shape{ //mozna dziedziczyć tylko po 1 klasie
-    int size;
+public final class Square extends Shape { //mozna dziedziczyć tylko po 1 klasie
+    private int size;
 
-    public Square(int size) {
+    Square(int size) {
         this.size = size;
     }
 
@@ -13,17 +13,17 @@ public final class Square extends Shape{ //mozna dziedziczyć tylko po 1 klasie
         System.out.println("Konstruktor Square");
     }
 
-    public int getSize() {
+    int getSize() {
         return size;
     }
 
-    public Square setSize(int size) {
+    Square setSize(int size) {
         this.size = size;
         return this;
     }
 
     @Override
-    int countArea() {
+    public int countArea() {
         return 4 * size;
     }
 }

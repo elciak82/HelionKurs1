@@ -1,8 +1,8 @@
-package videopoint;
+package videopoint.shapes;
 
 //final - słówko blokujące np klasę (nie można po niej dziedziczyć
 //, lub np metodę - nie można jej modyfikować
-public class Shape {
+class Shape {
 
     Shape(){
         System.out.println("Konstruktor Shape");
@@ -16,7 +16,7 @@ public class Shape {
         return 0;
     }
 
-    String getname() {
+    public String getname() {
         return getClass().getSimpleName(); //wspólny kod
     }
 }
