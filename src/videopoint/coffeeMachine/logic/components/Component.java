@@ -1,13 +1,14 @@
 package videopoint.coffeeMachine.logic.components;
 
 import videopoint.coffeeMachine.logic.view.UserInterface;
+import videopoint.coffeeMachine.model.Storage;
 import videopoint.coffeeMachine.model.exceptions.EmptyBoxException;
 
 abstract class Component {
-    String storage;
+    Storage storage;
     UserInterface userInterface;
 
-    public Component(String storage, UserInterface userInterface) {
+    public Component(Storage storage, UserInterface userInterface) {
         this.storage = storage;
         this.userInterface = userInterface;
     }

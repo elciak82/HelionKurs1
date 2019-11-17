@@ -5,14 +5,13 @@ import videopoint.coffeeMachine.model.Storage;
 import videopoint.coffeeMachine.model.exceptions.EmptyBoxException;
 
 public class MilkComponent extends Component { //dostarcza implementacje dla naszego rozwiazania
-    public MilkComponent(String storage, UserInterface userInterface) {
+    public MilkComponent(Storage storage, UserInterface userInterface) {
         super(storage, userInterface);
     }
 
     @Override
     void tryAddComponent() throws EmptyBoxException {
         userInterface.showStep("Mleko");
-        Storage storage = new Storage();
-        storage.getCoffee(); //kurde dlaczego u mnie nie działa?
+        storage.getCoffee();
     }
 }
