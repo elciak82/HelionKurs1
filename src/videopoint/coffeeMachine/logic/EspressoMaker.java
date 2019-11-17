@@ -12,7 +12,7 @@ public class EspressoMaker extends Maker{
         super.makeCoffee(); //super - inicjalizacja wszystkich pol
         boolean status = coffeeComponent.addComponent();
         if(status) {
-            userInterface.showCoffeeReady("Espresso gotowe");
+            userInterface.showCoffeeReady("Espresso gotowe.");
         }
     }
 }
