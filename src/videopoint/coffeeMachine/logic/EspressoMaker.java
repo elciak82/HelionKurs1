@@ -3,7 +3,7 @@ package videopoint.coffeeMachine.logic;
 import videopoint.coffeeMachine.logic.view.UserInterface;
 
 public class EspressoMaker extends Maker{
-    EspressoMaker(UserInterface userInterface) {
+    public EspressoMaker(UserInterface userInterface) {
         super(userInterface);
     }
 
@@ -12,7 +12,7 @@ public class EspressoMaker extends Maker{
         super.makeCoffee(); //super - inicjalizacja wszystkich pol
         boolean status = coffeeComponent.addComponent();
         if(status) {
-            userInterface.showCoffeeReady("Espresso gotowe.");
+            userInterface.showCoffeeReady("Espresso gotowe");
         }
     }
 }

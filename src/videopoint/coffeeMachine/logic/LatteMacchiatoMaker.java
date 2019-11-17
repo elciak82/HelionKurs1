@@ -13,7 +13,7 @@ public class LatteMacchiatoMaker extends Maker{
         boolean status = milkComponent.addComponent() && chocolateComponent.addComponent() && coffeeComponent.addComponent();
 
         if(status) {
-            userInterface.showCoffeeReady("Latte Macchiato gotowe.");
+            userInterface.showCoffeeReady("Latte Macchiato gotowe");
         }
     }
 }
