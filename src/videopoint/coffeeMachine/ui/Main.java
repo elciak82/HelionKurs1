@@ -8,23 +8,29 @@ import videopoint.coffeeMachine.logic.view.UserInterface;
 import java.util.Scanner;
 
 public class Main {
-    private static String latte = "L";
-    private static String espresso = "E";
     private static Scanner scanner = new Scanner(System.in);
-    private static CoffeeMachine coffeeMachine;
-
 
     public static void main(String[] args) { //main wyświetla info uzytkownikowi (print)
-        System.out.println("Wybierz kawę: \n [E] - espresso\n [L] = Latte Macchiato");
-        String coffeeType = getUserInput();
-        if (coffeeType.equals(latte)) {
-            coffeeMachine = new LatteMacchiatoMaker(new AdvanceUi());
-            coffeeMachine.makeCoffee();
-        }
-        if (coffeeType.equals(espresso)) {
-            coffeeMachine = new EspressoMaker(new AdvanceUi());
-            coffeeMachine.makeCoffee();
-        }
+        String coffeeType;
+        String exit = "X";
+        do {
+            System.out.println("Wybierz kawę: \n [E] - Espresso\n [L] = Latte Macchiato\n [X] - Exit");
+            coffeeType = getUserInput();
+            String latte = "L";
+            CoffeeMachine coffeeMachine;
+            if (coffeeType.equalsIgnoreCase(latte)) {
+                coffeeMachine = new LatteMacchiatoMaker(new AdvanceUi());
+                coffeeMachine.makeCoffee();
+            }
+            String espresso = "E";
+            if (coffeeType.equalsIgnoreCase(espresso)) {
+                coffeeMachine = new EspressoMaker(new AdvanceUi());
+                coffeeMachine.makeCoffee();
+            }
+            if (coffeeType.equalsIgnoreCase(exit)) {
+                System.out.println("Zapraszamy ponownie!");
+            }
+        } while (!coffeeType.equalsIgnoreCase(exit));
     }
 
     static class AdvanceUi implements UserInterface {
@@ -49,6 +55,7 @@ public class Main {
             System.out.println("BIEP! BIEP!");
         }
     }
+
     private static String getUserInput() {
         return scanner.nextLine();
     }

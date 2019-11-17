@@ -8,16 +8,17 @@ abstract class Component {
     Storage storage;
     UserInterface userInterface;
 
-    public Component(Storage storage, UserInterface userInterface) {
+    Component(Storage storage, UserInterface userInterface) {
         this.storage = storage;
         this.userInterface = userInterface;
     }
-    public final boolean addComponent(){ //zawiera logike związana z pobraniem komponentu
+
+    public final boolean addComponent() { //zawiera logike związana z pobraniem komponentu
         boolean status = false;
         try {
             tryAddComponent();
             status = true;
-        }catch (EmptyBoxException ebe) {
+        } catch (EmptyBoxException ebe) {
             userInterface.showError("Brak porduktu " + ebe.getMessage());
         } finally {
             userInterface.playSound(); //wywolujemy userInterface - informujemy usera ze wykonalismy kolejny krok
